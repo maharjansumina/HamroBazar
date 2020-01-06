@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="#FFFFFF"
+    tools:context=".TermsConditionsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="68dp"
+            android:layout_height="93dp"
+            android:src="@drawable/hamrobazarlogo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TermsWelcome"
+                android:text="Welcome to" />
+
+            <TextView
+                style="@style/TermsWelcome"
+                android:text="Hamrobazar App" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Thank you for installing Hamrobazar App."
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Before you can start using our online platform, please read our terms of service &amp; accept it."
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <CheckBox
+            android:id="@+id/chkTerms"
+            android:text="Click to view Terms of Use"
+            style="@style/TermsCheckBox"/>
+
+        <CheckBox
+            android:id="@+id/chkSafety"
+            android:text="Click to view Safety Tips"
+            style="@style/TermsCheckBox"
+            />
+
+        <CheckBox
+            android:id="@+id/chkAd"
+            android:text="Click to view Ad Posting Rule"
+            style="@style/TermsCheckBox"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAgree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:background="#2bacce"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:text="I have read &amp; agree to above terms"/>
+
+</LinearLayout>
