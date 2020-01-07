@@ -1,83 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:elevation="10dp"
     tools:context=".LoginActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="383dp"
-        android:layout_height="305dp"
-        android:layout_marginTop="184dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/email"/>
 
         <EditText
+            android:id="@+id/etUsername"
+            android:textColorHint="#867F7F"
+            android:textSize="20sp"
+            android:hint="  Enter Username"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/email"
-            android:hint="Enter Email Address"
-            android:padding="5dp" />
+            android:layout_height="wrap_content"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/key"/>
         <EditText
+            android:id="@+id/etPassword"
+            android:textSize="20sp"
+            android:hint="  Enter password"
             android:layout_width="match_parent"
+            android:textColorHint="#867F7F"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/key"
-            android:hint="Enter Password"
-            android:padding="5dp" />
+            android:inputType="textPassword"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="#2bacce"
+        android:text="Login to My Account"
+        android:textAllCaps="false"
+        android:textSize="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#696969" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="right"
+        android:background="#B22D27"
+        android:text="Forget Password"
+        android:textAllCaps="false"
+        android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="don't have account?" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="create one for FREE." />
+
+        </LinearLayout>
 
         <Button
-
-            android:layout_width="344dp"
-            android:layout_height="52dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:background="#2BACCF"
-            android:text="Login to My Account"
-            android:textAllCaps="false"
-            android:textColor="#fff" />
-
-
-        <Button
-            android:layout_width="151dp"
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="20dp"
-            android:background="#B22222"
-            android:text="Forget Password"
-            android:textColor="#fff" />
+            android:text="Register Now"
+            android:textSize="20sp"
+            android:textStyle="italic|bold"
+            android:textColor="#2babce"
+            android:layout_marginLeft="10dp"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:text="don't have account? create one for FREE."
-        android:textColor="#EBC885"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        android:background="#FFFFFF"
-        android:text="Register Now"
-        android:textAllCaps="false"
-        android:textColor="#2BACCF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
