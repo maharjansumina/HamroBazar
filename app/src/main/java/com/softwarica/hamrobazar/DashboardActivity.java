@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -18,15 +20,26 @@ public class DashboardActivity extends AppCompatActivity {
     private int dotscount;
     private ImageView[] dots;
 
+    private ImageView imgLogin;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        viewPager = findViewById(R.id.imageSlider);
+        viewPager = findViewById(R.id.imgSlider);
+        imgLogin = findViewById(R.id.imgLogin);
+
+        imgLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DashboardActivity.this, LoginActivity.class));
+            }
+        });
 
         //For Indicators
-        sliderDotsPanel = (LinearLayout) findViewById(R.id.sliderDots);
+        sliderDotsPanel = (LinearLayout) findViewById(R.id.sliderDotsPanel);
 
         ImageSliderAdapter adapter = new ImageSliderAdapter(this);
         viewPager.setAdapter(adapter);

@@ -53,7 +53,7 @@ public class TermsConditionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (chkTerms.isChecked() && chkSafety.isChecked() && chkAd.isChecked()) {
-                    startActivity(new Intent(TermsConditionsActivity.this, LoginActivity.class));
+                    startActivity(new Intent(TermsConditionsActivity.this, DashboardActivity.class));
                 }
                 else {
                     Toast.makeText(TermsConditionsActivity.this, "Error", Toast.LENGTH_SHORT).show();
