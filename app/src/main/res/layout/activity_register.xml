@@ -30,12 +30,11 @@
             android:text="Email address:"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/spEmail"
+        <EditText
+            android:id="@+id/etEmail"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:spinnerMode="dropdown"/>
+            android:layout_marginRight="20dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,7 +42,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/etFname"
+            android:id="@+id/etFullName"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/ic_star_black_24dp"
@@ -150,12 +149,11 @@
             android:drawableRight="@drawable/ic_star_black_24dp" />
 
 
-        <Spinner
-            android:id="@+id/spAddress3"
+        <EditText
+            android:id="@+id/etAddress3"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:spinnerMode="dropdown"/>
+            android:layout_marginRight="20dp" />
 
 
         <TextView
