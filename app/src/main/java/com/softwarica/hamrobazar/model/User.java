@@ -5,7 +5,7 @@ public class User {
     private String email;
     private String fullname;
     private String password;
-    private String conPassword;
+    private String conpassword;
     private String phone;
     private String mobile;
     private String address1;
@@ -13,11 +13,11 @@ public class User {
     private String address3;
     private String image;
 
-    public User(String email, String fullname, String password, String conPassword, String phone, String mobile, String address1, String address2, String address3, String image) {
+    public User(String email, String fullname, String password, String conpassword, String phone, String mobile, String address1, String address2, String address3, String image) {
         this.email = email;
         this.fullname = fullname;
         this.password = password;
-        this.conPassword = conPassword;
+        this.conpassword = conpassword;
         this.phone = phone;
         this.mobile = mobile;
         this.address1 = address1;
@@ -50,12 +50,12 @@ public class User {
         this.password = password;
     }
 
-    public String getConPassword() {
-        return conPassword;
+    public String getConpassword() {
+        return conpassword;
     }
 
-    public void setConPassword(String conPassword) {
-        this.conPassword = conPassword;
+    public void setConpassword(String conpassword) {
+        this.conpassword = conpassword;
     }
 
     public String getPhone() {
@@ -105,7 +105,4 @@ public class User {
     public void setImage(String image) {
         this.image = image;
     }
-
-
-
 }
